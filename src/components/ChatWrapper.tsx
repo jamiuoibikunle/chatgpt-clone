@@ -145,11 +145,6 @@ export default ({ children }: Children) => {
                 />
                 <ChatButton
                   action={() => null}
-                  icon={<BsMoon />}
-                  title="Dark mode"
-                />
-                <ChatButton
-                  action={() => null}
                   icon={<BsBoxArrowUpRight size={20} />}
                   title="Updates & FAQ"
                 />

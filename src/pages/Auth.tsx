@@ -1,4 +1,5 @@
-import { Button, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
+import React from "react";
+import { Button, Heading, HStack, Text, VStack } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { BrandIcon } from "../chakra";
 

@@ -1,6 +1,7 @@
-import { Box, Image, Text, VStack } from "@chakra-ui/react";
-import { useEffect, useState } from "react";
+import { Text, VStack } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
 import { BrandIcon } from "../chakra";
+import { motion } from "framer-motion";
 
 export default () => {
   const [step, setStep] = useState(1);
@@ -19,7 +20,9 @@ export default () => {
     <VStack h="100vh" w="100%" justifyContent="center" spacing={8} color="gray">
       <BrandIcon boxSize={34} />
       {step === 1 ? (
-        <Text>Please stand by, while we are checking your browser...</Text>
+        <motion.div>
+          <Text>Please stand by, while we are checking your browser...</Text>
+        </motion.div>
       ) : null}
     </VStack>
   );
