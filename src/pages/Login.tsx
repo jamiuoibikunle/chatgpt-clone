@@ -16,12 +16,21 @@ import {
 import { BrandIcon } from "../chakra";
 import { FcGoogle } from "react-icons/fc";
 import { BsMicrosoft } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 export default () => {
   const [isMobile] = useMediaQuery("(max-width: 600px)");
+  const navigate = useNavigate();
 
   return (
-    <VStack h="100vh" w="xs" mx="auto" spacing={20} pt={16}>
+    <VStack
+      h="100vh"
+      w={{ base: "100%", md: "sm" }}
+      mx="auto"
+      spacing={20}
+      pt={16}
+      px={5}
+    >
       {!isMobile ? <BrandIcon boxSize={34} /> : null}
       <VStack w="100%" spacing={{ base: 5, md: 3 }}>
         <Heading fontSize="1.5rem" fontWeight="600" py={5}>
@@ -41,7 +50,12 @@ export default () => {
         </Button>
         <Box>
           Don't have an account?{" "}
-          <Button color="brand.green" variant="link" fontWeight="500">
+          <Button
+            color="brand.green"
+            variant="link"
+            fontWeight="500"
+            onClick={() => navigate("/auth/signup")}
+          >
             Sign up
           </Button>
         </Box>
