@@ -5,6 +5,8 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import Onboarding from "./pages/Onboarding";
 import Auth from "./pages/Auth";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 export default () => {
   return (
@@ -13,6 +15,8 @@ export default () => {
         <Routes>
           <Route path="/" element={<Onboarding />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/auth/login" element={<Login />} />
+          <Route path="/auth/signup" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

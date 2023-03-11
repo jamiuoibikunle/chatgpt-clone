@@ -1,10 +1,7 @@
 import { Button, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
 import { BrandIcon } from "../chakra";
 
 export default () => {
-  const navigate = useNavigate();
-
   return (
     <VStack h="100vh" w="100%" justifyContent="center" spacing={3}>
       <BrandIcon boxSize={34} />
@@ -13,18 +10,10 @@ export default () => {
       </Heading>
       <Text>Log in with your OpenAI account to continue</Text>
       <HStack>
-        <Button
-          fontWeight="500"
-          colorScheme="green"
-          onClick={() => navigate("/auth/login")}
-        >
+        <Button fontWeight="500" colorScheme="green">
           Log in
         </Button>
-        <Button
-          fontWeight="500"
-          colorScheme="green"
-          onClick={() => navigate("/auth/signup")}
-        >
+        <Button fontWeight="500" colorScheme="green">
           Sign up
         </Button>
       </HStack>
