@@ -19,7 +19,6 @@ import { BsMicrosoft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
 export default () => {
-  const [isMobile] = useMediaQuery("(max-width: 600px)");
   const navigate = useNavigate();
 
   return (
@@ -31,7 +30,7 @@ export default () => {
       pt={16}
       px={5}
     >
-      {!isMobile ? <BrandIcon boxSize={34} /> : null}
+      <BrandIcon display={{ base: "none", md: "block" }} boxSize={34} />
       <VStack w="100%" spacing={{ base: 5, md: 3 }}>
         <Heading fontSize="1.5rem" fontWeight="600" py={5}>
           Welcome back

@@ -1,13 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 import { createIcon } from "@chakra-ui/react";
 import { Button } from "./Button";
+import { Colors } from "./Colors";
 
 export const theme = extendTheme({
-  colors: {
-    brand: {
-      green: "#10A37F",
-    },
-  },
+  colors: Colors,
   components: {
     Button,
   },

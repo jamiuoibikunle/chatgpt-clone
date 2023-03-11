@@ -7,6 +7,7 @@ import Onboarding from "./pages/Onboarding";
 import Auth from "./pages/Auth";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Chat from "./pages/Chat";
 
 export default () => {
   return (
@@ -17,6 +18,7 @@ export default () => {
           <Route path="/auth" element={<Auth />} />
           <Route path="/auth/login" element={<Login />} />
           <Route path="/auth/signup" element={<SignUp />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>
