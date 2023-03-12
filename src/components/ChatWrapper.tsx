@@ -20,14 +20,14 @@ import {
 import { RiDeleteBinLine } from "react-icons/ri";
 import { FiLogOut, FiMenu } from "react-icons/fi";
 import { BsBoxArrowUpRight, BsMoon, BsPerson, BsPlus } from "react-icons/bs";
-import { useRef } from "react";
+import useViewport from "../hooks/useViewport";
 
 export default ({ children }: Children) => {
-  const [desktop] = useMediaQuery("(min-width: 600px)");
+  const [isViewDesktop] = useViewport(600);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  return desktop ? (
+  return isViewDesktop ? (
     <Flex>
       <VStack h="100vh" w="18rem" bg="brand.dark" spacing={3} p={3}>
         <Button
