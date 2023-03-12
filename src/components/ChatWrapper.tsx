@@ -79,7 +79,7 @@ export default ({ children }: Children) => {
           title="Log out"
         />
       </VStack>
-      <Box>{children}</Box>
+      <Box w="calc(100% - 18rem)">{children}</Box>
     </Flex>
   ) : (
     <Box h="100vh">
@@ -172,7 +172,9 @@ export default ({ children }: Children) => {
           icon={<BsPlus size={20} />}
         />
       </HStack>
-      <Box h="calc(100% - 3rem)">{children}</Box>
+      <Box h="calc(100% - 3rem)" w="100%">
+        {children}
+      </Box>
     </Box>
   );
 };
