@@ -8,7 +8,7 @@ export const chatSlice = createSlice({
   name: "chat",
   initialState,
   reducers: {
-    handleNewInput: (state, action) => {
+    handleNewInput: (state: RootState, action) => {
       state.chats = [...state.chats, action.payload];
     },
   },
