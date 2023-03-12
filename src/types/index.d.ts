@@ -8,3 +8,10 @@ interface ChatButton {
   right?: JSX.Element;
   title: string;
 }
+
+type RootState = ReturnType<typeof store.getState>;
+
+interface ChatCard {
+  sender: string;
+  text: string;
+}
